@@ -1,0 +1,66 @@
+input[type=text],
+input[type=email] {
+    padding: 8px 12px;
+    border: 0;
+    border-radius: 8px;
+    background-color: rgb(0 0 0 / .05);
+    background-image: linear-gradient(to bottom, rgb(0 0 0 / .04) 25%, #0000 75%);
+    backdrop-filter: saturate(3);
+    box-shadow: inset 0 2px rgb(0 0 0 / .05), 0 1px 0 #fff9, 0 0 20px #fda4af00;
+    transition: box-shadow .5s cubic-bezier(.1, .7, .1, 1);
+
+    &:focus {
+        background-color: #fff;
+        background-image: none;
+        box-shadow: 0 0 20px #e2d7e9;
+        outline: 2px solid #cab6d7;
+    }
+}
+
+select {
+    background-color: #fff;
+    text-align: left;
+    font-size: 15px;
+    font-weight: 600;
+    padding: 10px 12px;
+    border-radius: 8px;
+    text-decoration: none;
+    cursor: default;
+    border: none;
+    box-shadow: rgb(181, 181, 181) 0px -1px 0px 0px inset, rgba(0, 0, 0, 0.1) 0px 0px 0px 1px inset, rgb(255, 255, 255) 0px 0.5px 0px 1.5px inset;
+    line-height: 1;
+
+    &:not(:disabled) {
+        &:hover {
+            background-color: rgb(250 250 250);
+        }
+
+        &:focus-visible {
+            background-color: #fff;
+            box-shadow: 0 0 20px #e2d7e9;
+            outline: 2px solid #cab6d7;
+        }
+
+        &:open {
+            background-color: rgb(247 247 247);
+            box-shadow: 0 0 20px #e2d7e9, rgba(26, 26, 26, 0.12) -1px 0px 1px 0px inset, rgba(26, 26, 26, 0.12) 1px 0px 1px 0px inset, rgba(26, 26, 26, 0.2) 0px 2px 1px 0px inset;
+        }
+    }
+}
+
+.select-container {
+    position: relative;
+}
+
+.select-container__select {
+    appearance: none;
+    width: 100%;
+}
+
+.select-container__icon {
+    position: absolute;
+    top: 50%;
+    right: 8px;
+    margin-top: -10px;
+    pointer-events: none;
+}

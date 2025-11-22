@@ -1,0 +1,127 @@
+.button {
+    background-color: #fff;
+    text-align: center;
+    font-size: 15px;
+    font-weight: 600;
+    padding: 10px 12px;
+    border-radius: 8px;
+    text-decoration: none;
+    cursor: default;
+    border: none;
+    box-shadow: rgb(181, 181, 181) 0px -1px 0px 0px inset, rgba(0, 0, 0, 0.1) 0px 0px 0px 1px inset, rgb(255, 255, 255) 0px 0.5px 0px 1.5px inset;
+    line-height: 1;
+
+    &:not(:disabled) {
+        &:hover {
+            background-color: rgb(250 250 250);
+        }
+        &:active {
+            background-color: rgb(247 247 247);
+            box-shadow: rgba(26, 26, 26, 0.12) -1px 0px 1px 0px inset, rgba(26, 26, 26, 0.12) 1px 0px 1px 0px inset, rgba(26, 26, 26, 0.2) 0px 2px 1px 0px inset;
+            .button__content {
+                transform: translateY(1px);
+            }
+        }
+    }
+
+    &:disabled {
+        background-color: rgba(0,0,0,0.05);
+        color: rgb(160 160 160);
+        box-shadow: none;
+    }
+
+}
+
+.button--discord {
+    position: relative;
+    background-color: #5865F2;
+    color: #fff;
+    padding: 10px 16px;
+    box-shadow: #5865F2 0px -1px 0px 1px inset, #5865F2 0px 0px 0px 1px inset, rgba(255, 255, 255, 0.35) 0px 0.5px 0px 1.5px inset;
+
+    &::before {
+        position: absolute;
+        content: "";
+        inset: 0;
+        bottom: 2px;
+        border-radius: inherit;
+        display: block;
+        background-image: linear-gradient(to bottom, #fff0, #fff6);
+        mix-blend-mode: overlay;
+    }
+
+    &:not(:disabled) {
+        &:hover {
+            background-color: lighten(#5865F2, 2%);
+        }
+        &:active {
+            background-color: darken(#5865F2, 2%);
+            box-shadow: rgba(26, 26, 26, 0.12) -1px 0px 1px 0px inset, rgba(26, 26, 26, 0.12) 1px 0px 1px 0px inset, rgba(26, 26, 26, 0.2) 0px 2px 1px 0px inset;
+            .button__content {
+                transform: translateY(1px);
+            }
+            &::before {
+                inset: 0;
+            }
+        }
+    }
+
+    img {
+        width: 16px;
+        height: 16px;
+    }
+}
+
+.button--primary {
+    --bg-color: #A685BC;
+    --bg-color-hover: #B295C5;
+    position: relative;
+    background-color: var(--bg-color);
+    color: #fff;
+    padding: 10px 16px;
+    box-shadow: var(--bg-color) 0px -1px 0px 1px inset, var(--bg-color) 0px 0px 0px 1px inset, rgba(255, 255, 255, 0.35) 0px 0.5px 0px 1.5px inset;
+
+    &::before {
+        position: absolute;
+        content: "";
+        inset: 0;
+        bottom: 2px;
+        border-radius: inherit;
+        display: block;
+        background-image: linear-gradient(to bottom, #fff0, #fff3);
+        mix-blend-mode: overlay;
+    }
+
+    &:not(:disabled) {
+        &:hover {
+            background-color: var(--bg-color-hover);
+        }
+        &:active {
+            background-color: var(--bg-color);
+            box-shadow: rgba(26, 26, 26, 0.12) -1px 0px 1px 0px inset, rgba(26, 26, 26, 0.12) 1px 0px 1px 0px inset, rgba(26, 26, 26, 0.2) 0px 2px 1px 0px inset;
+            .button__content {
+                transform: translateY(1px);
+            }
+            &::before {
+                inset: 0;
+            }
+        }
+    }
+
+    &:disabled {
+        background-color: rgba(0,0,0,0.17);
+        color: #fff;
+        box-shadow: none;
+
+        &::before {
+            display: none;
+        }
+    }
+}
+
+.button__content {
+    display: flex;
+    gap: 8px;
+    align-items: center;
+    justify-content: center;
+}

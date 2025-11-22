@@ -1,0 +1,23 @@
+#loading-bar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 4px;
+    background-color: #f472b6;
+    box-shadow: 0 0 40px #f9a8d4;
+    transform-origin: left top;
+    transform: scaleX(0);
+    transition: transform .5s cubic-bezier(.1,.7,.1,1);
+
+    &.is-loading {
+        transform: scale(.4);
+    }
+
+    &.is-loaded {
+        transform: scaleX(1);
+        opacity: 0;
+        transition: transform .5s cubic-bezier(.1,.7,.1,1), opacity .5s cubic-bezier(.1,.7,.1,1);
+    }
+
+}

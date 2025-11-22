@@ -1,0 +1,13 @@
+.stack {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+}
+
+.stack--horizontal {
+    flex-direction: row;
+}
+
+.stack--small {
+    gap: 8px;
+}
