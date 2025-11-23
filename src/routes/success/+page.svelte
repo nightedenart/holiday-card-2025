@@ -28,6 +28,9 @@
 
     <address>
         {[address.first_name, address.last_name].join(" ")}<br>
+        {#if address.suite}
+            {address.suite}<br>
+        {/if}
         {address.address}<br>
         {#if address.address2}
             {address.address2}<br>
